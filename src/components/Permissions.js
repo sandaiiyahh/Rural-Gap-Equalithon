@@ -26,8 +26,10 @@ function Permissions() {
         <button class="link" onClick={handleShow}>
           Read more
         </button>
-        <Button variant="primary">Accept</Button>
-        <Button>Decline</Button>
+        <div>
+          <Button variant="primary">Accept</Button>
+          <Button>Decline</Button>
+        </div>
       </Jumbotron>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
