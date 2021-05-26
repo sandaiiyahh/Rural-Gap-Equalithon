@@ -81,3 +81,28 @@ code {
   font-size: 1.5em;
   align-self: baseline;
 }
+
+/* Media Query */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .question,
+  .prompt,
+  .step-text {
+    text-align: center;
+  }
+  .number {
+    margin-bottom: 5px;
+  }
+  .container {
+    top: 0;
+    left: 0;
+    transform: none;
+    position: unset;
+  }
+  .steps {
+    display: block;
+  }
+  .media-btn {
+    margin-right: 0px;
+    margin-bottom: 25px;
+  }
+}
