@@ -17,8 +17,8 @@ function MediaSelect() {
         <p class="number">3.</p>
         <p class="step-text">Try recording again or submit it.</p>
       </div>
-      <button>Video Recording</button>
-      <button>Voice Recording</button>
+      <button class="media-btn">Video Recording</button>
+      <button class="media-btn">Voice Recording</button>
     </div>
   );
 }
