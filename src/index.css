@@ -37,22 +37,19 @@ code {
 }
 
 .steps {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
   margin-bottom: 2em;
 }
 
 .number {
   font-size: 2.3em;
   font-weight: 900;
+  text-align: left;
 }
 
 .step-text {
   font-size: 1.5em;
   vertical-align: text-bottom;
   text-align: left;
-  margin: 0px 10px 0px 5px;
 }
 
 .media-btn {
@@ -92,15 +89,17 @@ code {
   }
   .number {
     margin-bottom: 5px;
+    position: relative;
+  }
+  .step-text {
+    text-align: left;
+    /* margin-left: 2em; */
   }
   .container {
     top: 0;
     left: 0;
     transform: none;
     position: unset;
-  }
-  .steps {
-    display: block;
   }
   .media-btn {
     margin-right: 0px;
