@@ -53,12 +53,8 @@ code {
 }
 
 .media-btn {
-  border: none;
   padding: 1em;
   margin-right: 2em;
-  background-color: rgb(57, 57, 57);
-  color: white;
-  font-weight: 500;
 }
 
 .btn-text {

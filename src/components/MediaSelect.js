@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
 function MediaSelect() {
   return (
@@ -25,14 +26,14 @@ function MediaSelect() {
           <p className="step-text">Try recording again or submit it.</p>
         </div>
       </div>
-      <button className="media-btn">
+      <Button className="media-btn">
         <i className="bi bi-camera-video icon"></i>
         <p className="btn-text">Video Recording</p>
-      </button>
-      <button className="media-btn">
+      </Button>
+      <Button className="media-btn">
         <i className="bi bi-mic mic"></i>
         <p className="btn-text">Voice Recording</p>
-      </button>
+      </Button>
     </Container>
   );
 }
