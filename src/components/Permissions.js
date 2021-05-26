@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
@@ -27,7 +28,9 @@ function Permissions() {
           Read more
         </button>
         <div>
-          <Button variant="primary">Accept</Button>
+          <Link to="/start">
+            <Button variant="primary">Accept</Button>
+          </Link>
           <Button>Decline</Button>
         </div>
       </Jumbotron>
