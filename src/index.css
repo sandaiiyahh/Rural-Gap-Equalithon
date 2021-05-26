@@ -60,4 +60,24 @@ code {
   margin-right: 2em;
   background-color: rgb(57, 57, 57);
   color: white;
+  font-weight: 500;
+}
+
+.btn-text {
+  display: inline;
+  font-size: 1.3em;
+  vertical-align: middle;
+}
+
+.icon {
+  margin-right: 5px;
+  font-size: 1.6em;
+  vertical-align: bottom;
+  margin-right: 8px;
+}
+
+.mic {
+  margin-right: 5px;
+  font-size: 1.5em;
+  align-self: baseline;
 }
