@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Permissions from './components/Permissions';
 import MediaSelect from './components/MediaSelect';
-import './App.css';
+//import './App.css';
 
 function App() {
   return (
