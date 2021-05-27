@@ -2,6 +2,7 @@ import React, { useState, useRef, useCallback } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Permissions from './components/Permissions';
+import Question from './components/Question';
 import MediaSelect from './components/MediaSelect';
 import Audio from './components/Audio';
 import Finalize from './components/Finalize';
@@ -108,7 +109,7 @@ function App() {
           <Route
             path="/start"
             render={(props) => (
-              <MediaSelect {...props} setMediaType={setMediaType} />
+              <Question {...props} setMediaType={setMediaType} />
             )}
           />
           <Route
