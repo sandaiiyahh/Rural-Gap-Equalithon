@@ -21,14 +21,20 @@ function MediaSelect() {
           <p className="step-text">Try recording again or submit it.</p>
         </div>
       </div>
-      <Button className="media-btn">
-        <i className="bi bi-camera-video icon"></i>
-        <p className="btn-text">Video Recording</p>
-      </Button>
-      <Button className="media-btn">
-        <i className="bi bi-mic mic"></i>
-        <p className="btn-text">Voice Recording</p>
-      </Button>
+      <div className="row justify-content-center">
+        <div className="col-6 col-md-4">
+          <Button className="media-btn">
+            <i className="bi bi-camera-video icon"></i>
+            <p className="btn-text">Video Recording</p>
+          </Button>
+        </div>
+        <div className="col-6 col-md-4">
+          <Button className="media-btn">
+            <i className="bi bi-mic mic"></i>
+            <p className="btn-text">Voice Recording</p>
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }
