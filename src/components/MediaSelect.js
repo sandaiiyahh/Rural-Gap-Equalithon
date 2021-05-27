@@ -1,39 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import Record from './Record';
 
-function MediaSelect() {
+function MediaSelect(props) {
+  console.log('props --->', props);
+  const [showSteps, setShowSteps] = useState(true);
+
+  function handleClick(e) {
+    setShowSteps(false);
+    if (e.target.innerText.includes('Audio')) props.setMediaType('A');
+    console.log(props.mediaType);
+  }
   return (
     <div>
-      <div className="row text-align-center steps">
-        <div className="col-10 col-sm-4">
-          <p className="number">1.</p>
-          <p className="step-text">Choose the recording method.</p>
-        </div>
+      {showSteps && (
+        <div>
+          <div className="row text-align-center steps">
+            <div className="col-10 col-sm-4">
+              <p className="number">1.</p>
+              <p className="step-text">Choose the recording method.</p>
+            </div>
 
-        <div className="col-10 col-sm-4">
-          <p className="number">2.</p>
-          <p className="step-text">Click to start button to record.</p>
-        </div>
+            <div className="col-10 col-sm-4">
+              <p className="number">2.</p>
+              <p className="step-text">Click to start button to record.</p>
+            </div>
 
-        <div className="col-10 col-sm-4">
-          <p className="number">3.</p>
-          <p className="step-text">Try recording again or submit it.</p>
+            <div className="col-10 col-sm-4">
+              <p className="number">3.</p>
+              <p className="step-text">Try recording again or submit it.</p>
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-6 col-md-4">
+              <Button className="media-btn" onClick={(e) => handleClick(e)}>
+                <i className="bi bi-camera-video icon"></i>
+                <p className="btn-text">Video Recording</p>
+              </Button>
+            </div>
+            <div className="col-6 col-md-4">
+              <Button className="media-btn" onClick={(e) => handleClick(e)}>
+                <i className="bi bi-mic mic"></i>
+                <p className="btn-text">Voice Recording</p>
+              </Button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="row justify-content-center">
-        <div className="col-6 col-md-4">
-          <Button className="media-btn">
-            <i className="bi bi-camera-video icon"></i>
-            <p className="btn-text">Video Recording</p>
-          </Button>
-        </div>
-        <div className="col-6 col-md-4">
-          <Button className="media-btn">
-            <i className="bi bi-mic mic"></i>
-            <p className="btn-text">Voice Recording</p>
-          </Button>
-        </div>
-      </div>
+      )}
+      {!showSteps && <Record />}
     </div>
   );
 }
