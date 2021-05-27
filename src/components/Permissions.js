@@ -11,7 +11,7 @@ function Permissions() {
   const handleClose = () => setShow(false);
 
   return (
-    <Container className="p-5">
+    <Container className="p-5 text-center">
       <h1>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry
@@ -28,11 +28,13 @@ function Permissions() {
       <div className="row justify-content-center">
         <div className="col-6 col-md-2 mt-3">
           <Link to="/start">
-            <Button variant="primary">Accept</Button>
+            <Button variant="primary" className="button">
+              Accept
+            </Button>
           </Link>
         </div>
         <div className="col-6 col-md-2 mt-3">
-          <Button>Decline</Button>
+          <Button className="button">Decline</Button>
         </div>
       </div>
       {/* </Jumbotron> */}

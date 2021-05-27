@@ -52,6 +52,10 @@ code {
   text-align: left;
 }
 
+.button {
+  font-size: 1.3em;
+}
+
 .media-btn {
   padding: 1em;
   margin-right: 2em;
