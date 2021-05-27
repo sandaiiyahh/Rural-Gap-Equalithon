@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import MediaSelect from './MediaSelect';
 
-function Question() {
+function Question(props) {
   return (
     <Container className="p-5">
       <p className="question">Question:</p>
@@ -10,7 +10,7 @@ function Question() {
         Lorem ipsum dolor sit amet, consectur adipicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua?
       </p>
-      <MediaSelect />
+      <MediaSelect {...props} />
     </Container>
   );
 }

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Permissions from './components/Permissions';
 import Question from './components/Question';
-import MediaSelect from './components/MediaSelect';
 import Audio from './components/Audio';
 import Finalize from './components/Finalize';
 import { UPLOAD_URL } from './api';
