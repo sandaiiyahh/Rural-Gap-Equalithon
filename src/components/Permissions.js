@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -12,25 +12,30 @@ function Permissions() {
 
   return (
     <Container className="p-5">
-      <Jumbotron>
-        <h1>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry
-        </h1>
-        <p>
-          It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum.
-        </p>
-        <button class="link" onClick={handleShow}>
-          Read more
-        </button>
-        <div>
-          <Button variant="primary">Accept</Button>
+      <h1>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry
+      </h1>
+      <p>
+        It was popularised in the 1960s with the release of Letraset sheets
+        containing Lorem Ipsum passages, and more recently with desktop
+        publishing software like Aldus PageMaker including versions of Lorem
+        Ipsum.
+      </p>
+      <button className="link" onClick={handleShow}>
+        Read more
+      </button>
+      <div className="row justify-content-center">
+        <div className="col-6 col-md-2 mt-3">
+          <Link to="/start">
+            <Button variant="primary">Accept</Button>
+          </Link>
+        </div>
+        <div className="col-6 col-md-2 mt-3">
           <Button>Decline</Button>
         </div>
-      </Jumbotron>
+      </div>
+      {/* </Jumbotron> */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>

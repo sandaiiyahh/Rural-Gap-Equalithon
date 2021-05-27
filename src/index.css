@@ -14,4 +14,91 @@ code {
 
 .link {
   border: none;
+  background-color: white;
+}
+
+.container {
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -90%, 0);
+  position: absolute;
+}
+
+.question {
+  font-size: 4em;
+  font-weight: 800;
+  text-align: left;
+}
+
+.prompt {
+  text-align: left;
+  font-size: 1.6em;
+  margin-bottom: 2em;
+}
+
+.steps {
+  margin-bottom: 2em;
+}
+
+.number {
+  font-size: 2.3em;
+  font-weight: 900;
+  text-align: left;
+}
+
+.step-text {
+  font-size: 1.5em;
+  vertical-align: text-bottom;
+  text-align: left;
+}
+
+.media-btn {
+  padding: 1em;
+  margin-right: 2em;
+}
+
+.btn-text {
+  display: inline;
+  font-size: 1.3em;
+  vertical-align: middle;
+}
+
+.icon {
+  margin-right: 5px;
+  font-size: 1.6em;
+  vertical-align: bottom;
+  margin-right: 8px;
+}
+
+.mic {
+  margin-right: 5px;
+  font-size: 1.5em;
+  align-self: baseline;
+}
+
+/* Media Query */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .question,
+  .prompt,
+  .step-text {
+    text-align: center;
+  }
+  .number {
+    margin-bottom: 5px;
+    position: relative;
+  }
+  .step-text {
+    text-align: left;
+    /* margin-left: 2em; */
+  }
+  .container {
+    top: 0;
+    left: 0;
+    transform: none;
+    position: unset;
+  }
+  .media-btn {
+    margin-right: 0px;
+    margin-bottom: 25px;
+  }
 }
