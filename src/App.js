@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Permissions from './components/Permissions';
 import Question from './components/Question';
-import Audio from './components/Audio';
+import Record from './components/Record';
 import Finalize from './components/Finalize';
 import { UPLOAD_URL } from './api';
 //import './App.css';
@@ -114,7 +114,7 @@ function App() {
           <Route
             path="/record"
             render={(props) => (
-              <Audio
+              <Record
                 {...props}
                 webcamRef={webcamRef}
                 capturing={capturing}
