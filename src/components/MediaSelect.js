@@ -27,7 +27,7 @@ function MediaSelect(props) {
         </div>
         <div className="row justify-content-center">
           <div className="col-6 col-md-4">
-            <Link to="/record">
+            <Link to="/video">
               <Button
                 className="media-btn"
                 onClick={() => props.setMediaType('V')}
