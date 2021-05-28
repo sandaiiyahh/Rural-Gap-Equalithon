@@ -15,33 +15,85 @@ function App() {
   const [recordedMedia, setRecordedMedia] = useState([]);
   const [participantId, setParticpantId] = useState(111);
   const [termsAccepted, setTermsAcceptance] = useState(false);
-  const [mediaType, setMediaType] = useState('V');
+  const [mediaType, setMediaType] = useState('A');
+  const [mediaURL, setMediaURL] = useState('');
 
   const handleDataAvailable = useCallback(
     ({ data }) => {
       if (data.size > 0) {
         setRecordedMedia((prev) => prev.concat(data));
+        console.log(recordedMedia.length);
       }
     },
-    [setRecordedMedia]
+    [setRecordedMedia, recordedMedia]
   );
 
   const handleStartCaptureClick = useCallback(() => {
+    setRecordedMedia([]);
     setCapturing(true);
-    mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
-      mimeType: 'video/webm',
-    });
-    mediaRecorderRef.current.addEventListener(
-      'dataavailable',
-      handleDataAvailable
-    );
-    mediaRecorderRef.current.start();
-  }, [webcamRef, setCapturing, mediaRecorderRef, handleDataAvailable]);
+
+    if (mediaType === 'V') {
+      mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
+        mimeType: 'video/webm',
+      });
+
+      mediaRecorderRef.current.addEventListener(
+        'dataavailable',
+        handleDataAvailable
+      );
+
+      mediaRecorderRef.current.start();
+    } else if (mediaType === 'A') {
+      const constraints = { video: false, audio: true };
+
+      navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+        mediaRecorderRef.current = new MediaRecorder(stream, {
+          mimeType: 'audio/webm',
+        });
+
+        mediaRecorderRef.current.addEventListener(
+          'dataavailable',
+          handleDataAvailable
+        );
+
+        mediaRecorderRef.current.start();
+      });
+    }
+  }, [
+    mediaType,
+    webcamRef,
+    setCapturing,
+    mediaRecorderRef,
+    handleDataAvailable,
+    setRecordedMedia,
+  ]);
+
+  const createPreviewURL = useCallback(() => {
+    console.log('in createPreviewURL method');
+    if (recordedMedia.length) {
+      const mediaConfig = {};
+
+      if (mediaType === 'A') {
+        mediaConfig.type = 'audio/webm';
+      }
+
+      if (mediaType === 'V') {
+        mediaConfig.type = 'video/webm';
+      }
+
+      let blob = new Blob(recordedMedia, mediaConfig);
+      const url = URL.createObjectURL(blob);
+      setMediaURL(url);
+    }
+  }, [recordedMedia, mediaType, setMediaURL]);
 
   const handleStopCaptureClick = React.useCallback(() => {
-    mediaRecorderRef.current.stop();
+    if (mediaRecorderRef.current) {
+      mediaRecorderRef.current.stop();
+    }
     setCapturing(false);
-  }, [mediaRecorderRef, setCapturing]);
+    createPreviewURL();
+  }, [mediaRecorderRef, setCapturing, createPreviewURL]);
 
   const handleUpload = React.useCallback(() => {
     if (recordedMedia.length) {
@@ -55,7 +107,7 @@ function App() {
         mediaConfig.type = 'video/webm';
       }
 
-      const blob = new Blob(recordedMedia, mediaConfig);
+      let blob = new Blob(recordedMedia, mediaConfig);
 
       const formData = new FormData();
 
@@ -119,6 +171,9 @@ function App() {
                 webcamRef={webcamRef}
                 capturing={capturing}
                 mediaType={mediaType}
+                mediaURL={mediaURL}
+                setCapturing={setCapturing}
+                handleDataAvailable={handleDataAvailable}
                 handleStartCapture={handleStartCaptureClick}
                 handleStopCapture={handleStopCaptureClick}
                 handleUpload={handleUpload}
