@@ -4,7 +4,7 @@ import { Button, Container } from 'react-bootstrap';
 import Webcam from 'react-webcam';
 import Question from './Question';
 
-const Record = (props) => {
+const Video = (props) => {
   return (
     <Container>
       <div className="row">
@@ -43,4 +43,4 @@ const Record = (props) => {
   );
 };
 
-export default Record;
+export default Video;
