@@ -1,10 +1,21 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
-const Finalize = () => {
+const Finalize = (props) => {
+  console.log(props);
   return (
-    <div>
-      <h1>This is a placeholder Submit component</h1>
-    </div>
+    <Container className="p-5 text-center">
+      <h1 className="review-title">Review Recording</h1>
+      <div className="row justify-content-center align-items-center">
+        <div className="col-6">
+          <Button>Try Again</Button>
+        </div>
+        <div className="col-6">
+          <Button>Submit</Button>
+        </div>
+      </div>
+    </Container>
   );
 };
 
