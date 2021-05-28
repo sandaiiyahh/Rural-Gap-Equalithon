@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Permissions from './components/Permissions';
 import MediaSelect from './components/MediaSelect';
 import Record from './components/Record';
+import Audio from './components/Audio';
 import Finalize from './components/Finalize';
 import { UPLOAD_URL } from './api';
 //import './App.css';
@@ -164,7 +165,7 @@ function App() {
             )}
           />
           <Route
-            path="/record"
+            path="/video"
             render={(props) => (
               <Record
                 {...props}
@@ -181,10 +182,28 @@ function App() {
             )}
           />
           <Route
+            path="/audio"
+            render={(props) => (
+              <Audio
+                {...props}
+                capturing={capturing}
+                mediaType={mediaType}
+                mediaURL={mediaURL}
+                setCapturing={setCapturing}
+                handleDataAvailable={handleDataAvailable}
+                handleStartCapture={handleStartCaptureClick}
+                handleStopCapture={handleStopCaptureClick}
+                handleUpload={handleUpload}
+              />
+            )}
+          />
+
+          <Route
             path="/finish"
             render={(props) => (
               <Finalize
                 {...props}
+                mediaURL={mediaURL}
                 handleReRecord={handleReRecord}
                 handleUpload={handleUpload}
               />

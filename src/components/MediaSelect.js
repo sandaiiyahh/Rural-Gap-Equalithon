@@ -38,7 +38,7 @@ function MediaSelect(props) {
             </Link>
           </div>
           <div className="col-6 col-md-4">
-            <Link to="/record">
+            <Link to="/audio">
               <Button
                 className="media-btn"
                 onClick={() => props.setMediaType('A')}
