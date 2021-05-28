@@ -2,7 +2,6 @@ import React, { useState, useRef, useCallback } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Permissions from './components/Permissions';
-import Question from './components/Question';
 import MediaSelect from './components/MediaSelect';
 import Record from './components/Record';
 import Finalize from './components/Finalize';

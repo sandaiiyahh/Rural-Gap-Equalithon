@@ -1,6 +1,5 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import MediaSelect from './MediaSelect';
 
 function Question(props) {
   return (
@@ -10,7 +9,6 @@ function Question(props) {
         Lorem ipsum dolor sit amet, consectur adipicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua?
       </p>
-      {/* <MediaSelect {...props} /> */}
     </Container>
   );
 }
