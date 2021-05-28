@@ -16,14 +16,6 @@ code {
   border: none;
   background-color: white;
 }
-
-.container {
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -90%, 0);
-  position: absolute;
-}
-
 .question {
   font-size: 4em;
   font-weight: 800;
@@ -94,12 +86,6 @@ code {
   .step-text {
     text-align: left;
     /* margin-left: 2em; */
-  }
-  .container {
-    top: 0;
-    left: 0;
-    transform: none;
-    position: unset;
   }
   .media-btn {
     margin-right: 0px;
