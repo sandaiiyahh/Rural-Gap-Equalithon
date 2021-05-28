@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button, Container } from 'react-bootstrap';
 import Webcam from 'react-webcam';
 import Question from './Question';
 
-const Record = (props) => {
+const Video = (props) => {
   return (
     <Container>
       <div className="row">
@@ -31,13 +32,15 @@ const Record = (props) => {
       </div>
       <div className="row justify-content-center mt-2">
         <div className="col-4">
-          <Button className="btn-block" onClick={props.handleUpload}>
-            Test Submission
-          </Button>
+          <Link to="/finish">
+            <Button className="btn-block" onClick={props.handleUpload}>
+              Test Submission
+            </Button>
+          </Link>
         </div>
       </div>
     </Container>
   );
 };
 
-export default Record;
+export default Video;

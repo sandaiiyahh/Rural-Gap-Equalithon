@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Permissions from './components/Permissions';
 import MediaSelect from './components/MediaSelect';
-import Record from './components/Record';
+import Video from './components/Video';
 import Audio from './components/Audio';
 import Finalize from './components/Finalize';
 import { UPLOAD_URL } from './api';
@@ -167,7 +167,7 @@ function App() {
           <Route
             path="/video"
             render={(props) => (
-              <Record
+              <Video
                 {...props}
                 webcamRef={webcamRef}
                 capturing={capturing}

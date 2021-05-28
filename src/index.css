@@ -22,6 +22,11 @@ code {
   text-align: left;
 }
 
+.review-title {
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
 .prompt {
   text-align: left;
   font-size: 1.6em;
