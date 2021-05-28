@@ -3,7 +3,7 @@ import { Navbar } from 'react-bootstrap';
 
 function Header() {
   return (
-    <Navbar className="py-5" expand="lg">
+    <Navbar className="py-3 header" expand="lg">
       <Navbar.Brand href="/">
         <img
           src="https://i.ibb.co/HFBpbMJ/americatalks.jpg"
