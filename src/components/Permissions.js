@@ -37,7 +37,6 @@ function Permissions() {
           <Button className="button">Decline</Button>
         </div>
       </div>
-      {/* </Jumbotron> */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
