@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button, Container } from 'react-bootstrap';
 import { ReactMic } from 'react-mic';
 import Question from './Question';
@@ -36,9 +37,11 @@ const Audio = (props) => {
       </div>
       <div className="row justify-content-center mt-2">
         <div className="col-4">
-          <Button className="btn-block" onClick={props.handleUpload}>
-            Test Submission
-          </Button>
+          <Link to="/finish">
+            <Button className="btn-block" onClick={props.handleUpload}>
+              Test Submission
+            </Button>
+          </Link>
         </div>
       </div>
     </Container>
