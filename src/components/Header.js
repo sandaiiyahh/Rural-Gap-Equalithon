@@ -3,8 +3,16 @@ import { Navbar } from 'react-bootstrap';
 
 function Header() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">America Talks</Navbar.Brand>
+    <Navbar className="py-5" expand="lg">
+      <Navbar.Brand href="/">
+        <img
+          src="https://i.ibb.co/HFBpbMJ/americatalks.jpg"
+          width="300"
+          height="119"
+          className="d-inline-block align-top"
+          alt="React Bootstrap logo"
+        />
+      </Navbar.Brand>
     </Navbar>
   );
 }
