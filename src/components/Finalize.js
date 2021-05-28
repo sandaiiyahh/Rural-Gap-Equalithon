@@ -21,7 +21,7 @@ const Finalize = (props) => {
       <h1 className="review-title">Review Recording</h1>
       <div className="row justify-content-center align-items-center">
         <div>
-          <img src={props.mediaURL.media_file} alt="video recording" />
+          <video src={props.mediaURL.media_file} type="video/mp4"></video>
         </div>
         <div className="col-4 col-md-2 mt-3">
           {props.mediaType === 'V' ? (

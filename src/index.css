@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
@@ -16,6 +17,10 @@ code {
   background-color: white;
 }
 
+.vh-50 {
+  height: 60vh;
+}
+
 .link {
   border: none;
   background-color: transparent;
@@ -24,7 +29,8 @@ code {
 }
 
 .permission-title {
-  font-weight: 900;
+  font-weight: 800;
+  font-size: 3.3em;
 }
 
 .question {
