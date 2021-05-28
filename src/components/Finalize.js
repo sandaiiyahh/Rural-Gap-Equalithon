@@ -6,19 +6,27 @@ import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
 
 const Finalize = (props) => {
+  console.log(props.mediaURL);
   const [show, setShow] = useState(false);
 
-  const handleShow = () => setShow(true);
+  const handleClick = () => {
+    setShow(true);
+    props.handleUpload();
+  };
+
   const handleClose = () => setShow(false);
   return (
     <Container className="p-5 text-center">
       <h1 className="review-title">Review Recording</h1>
       <div className="row justify-content-center align-items-center">
+        <div>
+          <img src={props.mediaURL.media_file} alt="video recording" />
+        </div>
         <div className="col-4 col-md-2 mt-3">
           <Button>Try Again</Button>
         </div>
         <div className="col-4 col-md-2 mt-3">
-          <Button onClick={handleShow}>Submit</Button>
+          <Button onClick={handleClick}>Submit</Button>
         </div>
       </div>
       <Modal show={show} onHide={handleClose}>
