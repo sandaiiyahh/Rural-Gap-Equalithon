@@ -15,6 +15,7 @@ const Finalize = (props) => {
   };
 
   const handleClose = () => setShow(false);
+
   return (
     <Container className="p-5 text-center">
       <h1 className="review-title">Review Recording</h1>
@@ -23,7 +24,15 @@ const Finalize = (props) => {
           <img src={props.mediaURL.media_file} alt="video recording" />
         </div>
         <div className="col-4 col-md-2 mt-3">
-          <Button>Try Again</Button>
+          {props.mediaType === 'V' ? (
+            <Link to="/video">
+              <Button>Try Again</Button>
+            </Link>
+          ) : (
+            <Link to="/audio">
+              <Button>Try Again</Button>
+            </Link>
+          )}
         </div>
         <div className="col-4 col-md-2 mt-3">
           <Button onClick={handleClick}>Submit</Button>

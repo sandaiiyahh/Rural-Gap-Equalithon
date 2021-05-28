@@ -203,6 +203,7 @@ function App() {
             render={(props) => (
               <Finalize
                 {...props}
+                mediaType={mediaType}
                 mediaURL={mediaURL}
                 handleReRecord={handleReRecord}
                 handleUpload={handleUpload}

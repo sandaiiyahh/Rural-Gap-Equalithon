@@ -20,23 +20,16 @@ const Video = (props) => {
       <div className="row justify-content-center">
         <div className="col-4">
           {props.capturing ? (
-            <Button className="btn-block" onClick={props.handleStopCapture}>
-              Stop Recording
-            </Button>
+            <Link to="/finish">
+              <Button className="btn-block" onClick={props.handleStopCapture}>
+                Stop Recording
+              </Button>
+            </Link>
           ) : (
             <Button className="btn-block" onClick={props.handleStartCapture}>
               Start Recording
             </Button>
           )}
-        </div>
-      </div>
-      <div className="row justify-content-center mt-2">
-        <div className="col-4">
-          <Link to="/finish">
-            <Button className="btn-block" onClick={props.handleUpload}>
-              Test Submission
-            </Button>
-          </Link>
         </div>
       </div>
     </Container>
