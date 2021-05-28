@@ -11,10 +11,9 @@ function Permissions() {
   const handleClose = () => setShow(false);
 
   return (
-    <Container className="p-5 text-center">
-      <h1>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry
+    <Container fluid className="py-5 text-center">
+      <h1 className="permission-title">
+        Lorem Ipsum dolor sit amet, consectetur adipscing elit
       </h1>
       <p>
         It was popularised in the 1960s with the release of Letraset sheets
