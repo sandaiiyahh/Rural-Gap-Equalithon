@@ -10,7 +10,7 @@ function Question(props) {
         Lorem ipsum dolor sit amet, consectur adipicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua?
       </p>
-      <MediaSelect {...props} />
+      {/* <MediaSelect {...props} /> */}
     </Container>
   );
 }

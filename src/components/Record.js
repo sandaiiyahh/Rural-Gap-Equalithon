@@ -1,11 +1,12 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Webcam from 'react-webcam';
+import Question from './Question';
 
 const Record = (props) => {
   return (
     <div>
-      <h1>This is a placeholder Record component</h1>
+      <Question />
       <Webcam audio={true} ref={props.webcamRef} />
       {props.capturing ? (
         <Button onClick={props.handleStopCapture}>Stop Recording</Button>

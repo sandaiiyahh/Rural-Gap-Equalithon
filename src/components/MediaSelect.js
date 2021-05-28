@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Question from './Question';
 
 function MediaSelect(props) {
   return (
-    <div>
+    <Container>
+      <Question />
       <div>
         <div className="row text-align-center steps">
           <div className="col-10 col-sm-4">
@@ -47,7 +50,7 @@ function MediaSelect(props) {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 

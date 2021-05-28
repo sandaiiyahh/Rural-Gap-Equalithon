@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Permissions from './components/Permissions';
 import Question from './components/Question';
+import MediaSelect from './components/MediaSelect';
 import Record from './components/Record';
 import Finalize from './components/Finalize';
 import { UPLOAD_URL } from './api';
@@ -108,7 +109,7 @@ function App() {
           <Route
             path="/start"
             render={(props) => (
-              <Question {...props} setMediaType={setMediaType} />
+              <MediaSelect {...props} setMediaType={setMediaType} />
             )}
           />
           <Route
