@@ -10,18 +10,18 @@ function MediaSelect(props) {
       <Question />
       <div>
         <div className="row text-align-center steps">
-          <div className="col-10 col-sm-4">
-            <p className="number">1.</p>
+          <div className="col-10 col-sm-4 d-flex">
+            <div className="num-circle">1</div>
             <p className="step-text">Choose the recording method.</p>
           </div>
 
-          <div className="col-10 col-sm-4">
-            <p className="number">2.</p>
+          <div className="col-10 col-sm-4 d-flex">
+            <div className="num-circle">2</div>
             <p className="step-text">Click to start button to record.</p>
           </div>
 
-          <div className="col-10 col-sm-4">
-            <p className="number">3.</p>
+          <div className="col-10 col-sm-4 d-flex">
+            <div className="num-circle">3</div>
             <p className="step-text">Try recording again or submit it.</p>
           </div>
         </div>

@@ -88,6 +88,20 @@ code {
   margin-bottom: 2em;
 }
 
+.num-circle {
+  width: 1.8em;
+  height: 1.4em;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: white;
+  color: var(--blue);
+
+  font-size: 3rem;
+  font-weight: 800;
+  margin-right: 10px;
+}
+
 .number {
   font-size: 2.3em;
   font-weight: 900;
@@ -96,8 +110,7 @@ code {
 
 .step-text {
   font-size: 1.5em;
-  vertical-align: text-bottom;
-  text-align: left;
+  font-weight: 800;
 }
 
 .button {
@@ -144,17 +157,8 @@ a {
 /* Media Query */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .question,
-  .prompt,
-  .step-text {
+  .prompt {
     text-align: center;
-  }
-  .number {
-    margin-bottom: 5px;
-    position: relative;
-  }
-  .step-text {
-    text-align: left;
-    /* margin-left: 2em; */
   }
   .media-btn {
     margin-right: 0px;
