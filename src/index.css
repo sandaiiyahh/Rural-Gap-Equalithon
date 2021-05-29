@@ -146,7 +146,7 @@ a {
 
 .stop-btn {
   background-color: white;
-  color: var(--darkBlue);
+  color: var(--pink);
 }
 
 .stop-icon {
@@ -177,6 +177,10 @@ a {
   margin-right: 5px;
   font-size: 1.5em;
   align-self: baseline;
+}
+
+.video-width {
+  width: 100%;
 }
 
 /* Media Query */
