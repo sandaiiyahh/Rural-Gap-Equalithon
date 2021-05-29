@@ -84,10 +84,6 @@ code {
   margin-bottom: 2em;
 }
 
-.steps {
-  margin-bottom: 2em;
-}
-
 .num-circle {
   width: 1.8em;
   height: 1.4em;
@@ -122,7 +118,8 @@ code {
   padding: 10px;
 }
 
-.button:hover {
+.button:hover,
+.media-btn:hover {
   background-color: #4d6889;
 }
 
@@ -133,19 +130,30 @@ a {
 .media-btn {
   padding: 1em;
   margin-right: 2em;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  background-color: var(--darkBlue);
+  border: none;
 }
 
 .btn-text {
-  display: inline;
   font-size: 1.3em;
-  vertical-align: middle;
+  margin-bottom: 0px;
+  margin-top: 1.5px;
 }
 
 .icon {
   margin-right: 5px;
-  font-size: 1.6em;
+  font-size: 1.5em;
   vertical-align: bottom;
   margin-right: 8px;
+}
+
+#voice {
+  background-color: white;
+  color: var(--darkBlue);
 }
 
 .mic {
@@ -159,9 +167,5 @@ a {
   .question,
   .prompt {
     text-align: center;
-  }
-  .media-btn {
-    margin-right: 0px;
-    margin-bottom: 25px;
   }
 }
