@@ -38,8 +38,24 @@ code {
 }
 
 .permission-title {
+  color: white;
   font-weight: 800;
-  font-size: 3.3em;
+  font-size: 60px;
+}
+
+.permission-body {
+  font-size: 24px;
+}
+
+.modal-content {
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-title {
+  color: var(--darkBlue);
+  font-weight: 900;
+  font-size: 36px;
 }
 
 .question {
