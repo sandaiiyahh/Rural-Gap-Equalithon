@@ -8,7 +8,7 @@ function MediaSelect(props) {
   return (
     <Container>
       <Question />
-      <div>
+      <div className="mt-5">
         <div className="row text-align-center mb-5">
           <div className="col-10 col-sm-4 d-flex">
             <div className="num-circle">1</div>
