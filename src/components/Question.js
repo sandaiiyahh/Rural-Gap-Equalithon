@@ -2,7 +2,6 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 
 function Question(props) {
-  console.log('props -->', props);
   return (
     <Container
       className={`${
