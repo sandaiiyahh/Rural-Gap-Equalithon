@@ -168,7 +168,7 @@ a {
   margin-right: 8px;
 }
 
-#voice {
+.voice {
   background-color: white;
   color: var(--darkBlue);
 }

@@ -42,8 +42,7 @@ function MediaSelect(props) {
           <div className="col-6 col-md-4">
             <Link to="/audio">
               <Button
-                className="btn-block media-btn"
-                id="voice"
+                className="btn-block media-btn voice"
                 onClick={() => props.setMediaType('A')}
               >
                 <div className="d-flex justify-content-center">
