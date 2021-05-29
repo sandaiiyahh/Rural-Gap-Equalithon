@@ -121,7 +121,7 @@ code {
 
 .button:hover,
 .media-btn:hover {
-  background-color: #4d6889;
+  background-color: #4d6889 !important;
 }
 
 a {
