@@ -2,6 +2,7 @@
   --yellow: #e7bb41;
   --darkBlue: #3d536d;
   --blue: #00aeef;
+  --pink: #ef598f;
 }
 
 body {
@@ -136,6 +137,22 @@ a {
   font-weight: 800;
   background-color: var(--darkBlue);
   border: none;
+}
+
+.record-icon {
+  font-size: 3em;
+  margin-right: 3px;
+}
+
+.stop-btn {
+  background-color: white;
+  color: var(--darkBlue);
+}
+
+.stop-icon {
+  font-size: 2.1em;
+  margin-right: 6px;
+  color: var(--pink);
 }
 
 .btn-text {

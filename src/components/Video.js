@@ -21,13 +21,25 @@ const Video = (props) => {
         <div className="col-4">
           {props.capturing ? (
             <Link to="/finish">
-              <Button className="btn-block" onClick={props.handleStopCapture}>
-                Stop Recording
+              <Button
+                className="btn-block media-btn p-2 stop-btn"
+                onClick={props.handleStopCapture}
+              >
+                <div className="d-flex justify-content-center">
+                  <i class="bi bi-stop-circle-fill stop-icon"></i>
+                  <p className="btn-text align-self-center">Stop Recording</p>
+                </div>
               </Button>
             </Link>
           ) : (
-            <Button className="btn-block" onClick={props.handleStartCapture}>
-              Start Recording
+            <Button
+              className="btn-block media-btn p-0"
+              onClick={props.handleStartCapture}
+            >
+              <div className="d-flex justify-content-center">
+                <i class="bi bi-record2 record-icon"></i>
+                <p className="btn-text align-self-center">Start Recording</p>
+              </div>
             </Button>
           )}
         </div>
