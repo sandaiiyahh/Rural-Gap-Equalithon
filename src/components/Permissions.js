@@ -27,16 +27,18 @@ function Permissions() {
             <button className="link" onClick={handleShow}>
               Read more
             </button>
-            <div className="row justify-content-center">
-              <div className="col-6 col-md-2 mt-3">
+            <div className="row justify-content-center mt-4">
+              <div className="col-6 col-md-4 mt-3">
                 <Link to="/start">
-                  <Button variant="primary" className="button">
+                  <Button variant="primary" className="btn-block button">
                     Accept
                   </Button>
                 </Link>
               </div>
               <div className="col-6 col-md-2 mt-3">
-                <Button className="button">Decline</Button>
+                <a href="https://americatalks.us/">
+                  <button className="link decline">Decline</button>
+                </a>
               </div>
             </div>
             <Modal show={show} onHide={handleClose}>
