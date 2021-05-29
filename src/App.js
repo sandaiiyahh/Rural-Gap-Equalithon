@@ -17,7 +17,6 @@ function App() {
   const [participantId, setParticpantId] = useState(111);
   const [termsAccepted, setTermsAcceptance] = useState(false);
   const [mediaType, setMediaType] = useState('A');
-  const [mediaURL, setMediaURL] = useState('');
 
   const handleDataAvailable = useCallback(
     ({ data }) => {
@@ -69,32 +68,12 @@ function App() {
     setRecordedMedia,
   ]);
 
-  const createPreviewURL = useCallback(() => {
-    console.log('in createPreviewURL method');
-    if (recordedMedia.length) {
-      const mediaConfig = {};
-
-      if (mediaType === 'A') {
-        mediaConfig.type = 'audio/webm';
-      }
-
-      if (mediaType === 'V') {
-        mediaConfig.type = 'video/webm';
-      }
-
-      let blob = new Blob(recordedMedia, mediaConfig);
-      const url = URL.createObjectURL(blob);
-      setMediaURL(url);
-    }
-  }, [recordedMedia, mediaType, setMediaURL]);
-
   const handleStopCaptureClick = React.useCallback(() => {
     if (mediaRecorderRef.current) {
       mediaRecorderRef.current.stop();
     }
     setCapturing(false);
-    createPreviewURL();
-  }, [mediaRecorderRef, setCapturing, createPreviewURL]);
+  }, [mediaRecorderRef, setCapturing]);
 
   const handleUpload = React.useCallback(() => {
     if (recordedMedia.length) {
@@ -172,7 +151,6 @@ function App() {
                 webcamRef={webcamRef}
                 capturing={capturing}
                 mediaType={mediaType}
-                mediaURL={mediaURL}
                 setCapturing={setCapturing}
                 handleDataAvailable={handleDataAvailable}
                 handleStartCapture={handleStartCaptureClick}
@@ -188,7 +166,6 @@ function App() {
                 {...props}
                 capturing={capturing}
                 mediaType={mediaType}
-                mediaURL={mediaURL}
                 setCapturing={setCapturing}
                 handleDataAvailable={handleDataAvailable}
                 handleStartCapture={handleStartCaptureClick}
@@ -204,7 +181,7 @@ function App() {
               <Finalize
                 {...props}
                 mediaType={mediaType}
-                mediaURL={mediaURL}
+                recordedMedia={recordedMedia}
                 handleReRecord={handleReRecord}
                 handleUpload={handleUpload}
               />
