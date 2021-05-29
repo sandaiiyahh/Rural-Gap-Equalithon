@@ -52,7 +52,7 @@ class Finalize extends Component {
         <div className="row justify-content-center align-items-center">
           <div>
             {this.props.mediaType === 'V' ? (
-              <video src={this.state.url} type="video/webm" />
+              <video controls src={this.state.url} type="video/webm" />
             ) : (
               <audio src={this.state.url} controls />
             )}
