@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function Permissions(props) {
   const [show, setShow] = useState(false);
+
+  const location = useLocation();
+  const setParticipantId = props.setParticipantId;
+
+  useEffect(() => {
+    const id = new URLSearchParams(location.search).get('id');
+    if (id) {
+      setParticipantId(id);
+      console.log(id);
+    }
+  }, [location, setParticipantId]);
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);

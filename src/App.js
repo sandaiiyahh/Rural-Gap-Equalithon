@@ -14,7 +14,7 @@ function App() {
   const mediaRecorderRef = useRef(null);
   const [capturing, setCapturing] = useState(false);
   const [recordedMedia, setRecordedMedia] = useState([]);
-  const [participantId, setParticpantId] = useState(111);
+  const [participantId, setParticpantId] = useState('Unknown ID');
   const [termsAccepted, setTermsAcceptance] = useState(false);
   const [mediaType, setMediaType] = useState('A');
 
