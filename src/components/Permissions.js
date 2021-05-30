@@ -42,6 +42,7 @@ function Permissions() {
               </div>
             </div>
             <Modal
+              animation={false}
               className="modal"
               size="lg"
               centered

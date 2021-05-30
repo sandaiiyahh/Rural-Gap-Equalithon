@@ -35,10 +35,11 @@ code {
 }
 
 .decline {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
-.permission-title {
+.permission-title,
+.finalize-title {
   color: white;
   font-weight: 800;
   font-size: 60px;
@@ -72,11 +73,6 @@ code {
 
 .bold {
   font-weight: 800;
-}
-
-.review-title {
-  font-size: 3.5em;
-  font-weight: 700;
 }
 
 .prompt {
@@ -119,6 +115,12 @@ code {
   padding: 10px;
 }
 
+.finalize-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.finalize-btn:hover,
 .button:hover,
 .media-btn:hover {
   background-color: #4d6889 !important;
@@ -168,7 +170,9 @@ a {
   margin-right: 8px;
 }
 
-.voice {
+.voice,
+.try-again,
+.home {
   background-color: white;
   color: var(--darkBlue);
 }
@@ -186,6 +190,15 @@ a {
 .flex-row {
   display: flex;
   flex-direction: row;
+}
+
+.submit-modal .modal-content {
+  background-color: var(--yellow) !important;
+}
+
+.modal-white {
+  color: white;
+  font-size: 2.5em;
 }
 
 /* Media Query */
