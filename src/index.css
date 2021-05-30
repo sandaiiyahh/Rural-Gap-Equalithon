@@ -218,7 +218,8 @@ a {
   .permission-body {
     font-size: 1em;
   }
-  .question {
+  .question,
+  .finalize-title {
     font-size: 2.25em;
   }
   .prompt {
