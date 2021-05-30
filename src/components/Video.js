@@ -9,25 +9,38 @@ const Video = (props) => {
     <Container>
       <div className="row">
         <div className="col">
-          <Question />
+          <Question className="flex-row" />
         </div>
       </div>
-      <div className="row justify-content-center mb-2">
-        <div className="col-7">
-          <Webcam audio={true} ref={props.webcamRef} />
+      <div className="row justify-content-center my-4">
+        {/* device width */}
+        <div className="col-12 col-md-7">
+          <Webcam className="video-width" audio={true} ref={props.webcamRef} />
         </div>
       </div>
       <div className="row justify-content-center">
-        <div className="col-4">
+        <div className="col-12 col-sm-6 col-md-4">
           {props.capturing ? (
             <Link to="/finish">
-              <Button className="btn-block" onClick={props.handleStopCapture}>
-                Stop Recording
+              <Button
+                className="btn-block media-btn p-2 stop-btn"
+                onClick={props.handleStopCapture}
+              >
+                <div className="d-flex justify-content-center">
+                  <i className="bi bi-stop-circle-fill stop-icon"></i>
+                  <p className="btn-text align-self-center">Stop Recording</p>
+                </div>
               </Button>
             </Link>
           ) : (
-            <Button className="btn-block" onClick={props.handleStartCapture}>
-              Start Recording
+            <Button
+              className="btn-block media-btn p-0"
+              onClick={props.handleStartCapture}
+            >
+              <div className="d-flex justify-content-center">
+                <i className="bi bi-record2 record-icon"></i>
+                <p className="btn-text align-self-center">Start Recording</p>
+              </div>
             </Button>
           )}
         </div>

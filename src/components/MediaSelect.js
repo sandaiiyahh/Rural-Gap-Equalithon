@@ -8,20 +8,20 @@ function MediaSelect(props) {
   return (
     <Container>
       <Question />
-      <div>
-        <div className="row text-align-center steps">
-          <div className="col-10 col-sm-4">
-            <p className="number">1.</p>
+      <div className="mt-5">
+        <div className="row text-align-center mb-5">
+          <div className="col-10 col-sm-4 d-flex">
+            <div className="num-circle">1</div>
             <p className="step-text">Choose the recording method.</p>
           </div>
 
-          <div className="col-10 col-sm-4">
-            <p className="number">2.</p>
+          <div className="col-10 col-sm-4 d-flex">
+            <div className="num-circle">2</div>
             <p className="step-text">Click to start button to record.</p>
           </div>
 
-          <div className="col-10 col-sm-4">
-            <p className="number">3.</p>
+          <div className="col-10 col-sm-4 d-flex">
+            <div className="num-circle">3</div>
             <p className="step-text">Try recording again or submit it.</p>
           </div>
         </div>
@@ -29,22 +29,26 @@ function MediaSelect(props) {
           <div className="col-6 col-md-4">
             <Link to="/video">
               <Button
-                className="media-btn"
+                className="btn-block media-btn"
                 onClick={() => props.setMediaType('V')}
               >
-                <i className="bi bi-camera-video icon"></i>
-                <p className="btn-text">Video Recording</p>
+                <div className="d-flex justify-content-center">
+                  <i className="bi bi-camera-video icon"></i>
+                  <p className="btn-text">Video Recording</p>
+                </div>
               </Button>
             </Link>
           </div>
           <div className="col-6 col-md-4">
             <Link to="/audio">
               <Button
-                className="media-btn"
+                className="btn-block media-btn voice"
                 onClick={() => props.setMediaType('A')}
               >
-                <i className="bi bi-mic mic"></i>
-                <p className="btn-text">Voice Recording</p>
+                <div className="d-flex justify-content-center">
+                  <i className="bi bi-mic mic icon"></i>
+                  <p className="btn-text">Voice Recording</p>
+                </div>
               </Button>
             </Link>
           </div>

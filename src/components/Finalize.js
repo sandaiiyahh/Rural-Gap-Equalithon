@@ -48,40 +48,69 @@ class Finalize extends Component {
     console.log(this.state.url);
     return (
       <Container className="p-5 text-center">
-        <h1 className="review-title">Review Recording</h1>
+        <h1 className="pb-4 finalize-title">Review Recording</h1>
         <div className="row justify-content-center align-items-center">
           <div>
             {this.props.mediaType === 'V' ? (
-              <video src={this.state.url} type="video/webm" />
+              <video
+                className="video-width"
+                controls
+                src={this.state.url}
+                type="video/webm"
+              />
             ) : (
               <audio src={this.state.url} controls />
             )}
           </div>
-          <div className="col-4 col-md-2 mt-3">
-            {this.props.mediaType === 'V' ? (
-              <Link to="/video">
-                <Button>Try Again</Button>
-              </Link>
-            ) : (
-              <Link to="/audio">
-                <Button>Try Again</Button>
-              </Link>
-            )}
-          </div>
-          <div className="col-4 col-md-2 mt-3">
-            <Button onClick={this.handleClick}>Submit</Button>
+          <div className="col-12">
+            <div className="row justify-content-center">
+              <div className="col-6 col-md-4 mt-3">
+                {this.props.mediaType === 'V' ? (
+                  <Link to="/video">
+                    <Button className="btn-block button try-again">
+                      Try Again
+                    </Button>
+                  </Link>
+                ) : (
+                  <Link to="/audio">
+                    <Button className="btn-block button try-again">
+                      Try Again
+                    </Button>
+                  </Link>
+                )}
+              </div>
+              <div className="col-6 col-md-4 mt-3">
+                <Button className="btn-block button" onClick={this.handleClick}>
+                  Submit
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
-        <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal
+          size="md"
+          centered
+          className="submit-modal"
+          animation={false}
+          show={this.state.show}
+          onHide={this.handleClose}
+        >
           <Modal.Header closeButton>
-            <Modal.Title>
+            <Modal.Title className="modal-white">
               Thank you. Your recording was successfully submitted.
             </Modal.Title>
           </Modal.Header>
           <Modal.Footer>
-            <Link to="/">
-              <Button>Go Back To Home</Button>
+            <Link to="/start">
+              <Button className="btn-block button finalize-btn mb-2">
+                Answer Another Question
+              </Button>
             </Link>
+            <a href="https://americatalks.us/">
+              <Button className="btn-block button finalize-btn home">
+                Go Back to Home
+              </Button>
+            </a>
           </Modal.Footer>
         </Modal>
       </Container>

@@ -15,10 +15,10 @@ function Permissions() {
       <div className="my-auto align-items-center">
         <div className="row">
           <div className="col">
-            <h1 className="permission-title">
+            <h1 className="permission-title mt-5">
               Lorem Ipsum dolor sit amet, consectetur adipscing elit
             </h1>
-            <p>
+            <p className="permission-body mt-5">
               It was popularised in the 1960s with the release of Letraset
               sheets containing Lorem Ipsum passages, and more recently with
               desktop publishing software like Aldus PageMaker including
@@ -41,11 +41,35 @@ function Permissions() {
                 </a>
               </div>
             </div>
-            <Modal show={show} onHide={handleClose}>
+            <Modal
+              animation={false}
+              className="modal"
+              size="lg"
+              centered
+              show={show}
+              onHide={handleClose}
+            >
               <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title className="modal-title">
+                  Detailed Terms and Privacy Policy
+                </Modal.Title>
               </Modal.Header>
-              <Modal.Body>Woohoo, you're reading text in a modal!</Modal.Body>
+              <Modal.Body>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos
+                dolores et quas molestias excepturi sint occaecati cupiditate
+                non provident, similique sunt in culpa qui officia deserunt
+                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+                rerum facilis est et expedita distinctio. Nam libero tempore,
+                cum soluta nobis est eligendi optio cumque nihil impedit quo
+                minus id quod maxime placeat facere possimus, omnis voluptas
+                assumenda est, omnis dolor repellendus. Temporibus autem
+                quibusdam et aut officiis debitis aut rerum necessitatibus saepe
+                eveniet ut et voluptates repudiandae sint et molestiae non
+                recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+                ut aut reiciendis voluptatibus maiores alias consequatur aut
+                perferendis doloribus asperiores repellat.
+              </Modal.Body>
             </Modal>
           </div>
         </div>

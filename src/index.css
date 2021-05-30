@@ -2,6 +2,7 @@
   --yellow: #e7bb41;
   --darkBlue: #3d536d;
   --blue: #00aeef;
+  --pink: #ef598f;
 }
 
 body {
@@ -34,23 +35,44 @@ code {
 }
 
 .decline {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
-.permission-title {
+.permission-title,
+.finalize-title {
+  color: white;
   font-weight: 800;
-  font-size: 3.3em;
+  font-size: 60px;
+}
+
+.permission-body {
+  font-size: 24px;
+}
+
+.modal-content {
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-title {
+  color: var(--darkBlue);
+  font-weight: 900;
+  font-size: 36px;
 }
 
 .question {
   font-size: 4em;
   font-weight: 800;
   text-align: left;
+  color: white;
 }
 
-.review-title {
-  font-size: 3.5em;
-  font-weight: 700;
+.question-container {
+  margin-top: 5rem;
+}
+
+.bold {
+  font-weight: 800;
 }
 
 .prompt {
@@ -59,8 +81,18 @@ code {
   margin-bottom: 2em;
 }
 
-.steps {
-  margin-bottom: 2em;
+.num-circle {
+  width: 1.8em;
+  height: 1.4em;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: white;
+  color: var(--blue);
+
+  font-size: 3rem;
+  font-weight: 800;
+  margin-right: 10px;
 }
 
 .number {
@@ -71,21 +103,27 @@ code {
 
 .step-text {
   font-size: 1.5em;
-  vertical-align: text-bottom;
-  text-align: left;
+  font-weight: 800;
 }
 
 .button {
   font-size: 1em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
   background-color: var(--darkBlue);
   border: none;
   padding: 10px;
 }
 
-.button:hover {
-  background-color: #4d6889;
+.finalize-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.finalize-btn:hover,
+.button:hover,
+.media-btn:hover {
+  background-color: #4d6889 !important;
 }
 
 a {
@@ -95,19 +133,48 @@ a {
 .media-btn {
   padding: 1em;
   margin-right: 2em;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  background-color: var(--darkBlue);
+  border: none;
+}
+
+.record-icon {
+  font-size: 3em;
+  margin-right: 3px;
+}
+
+.stop-btn {
+  background-color: white;
+  color: var(--pink);
+}
+
+.stop-icon {
+  font-size: 2.1em;
+  margin-right: 6px;
+  color: var(--pink);
 }
 
 .btn-text {
-  display: inline;
   font-size: 1.3em;
-  vertical-align: middle;
+  margin-bottom: 0px;
+  margin-top: 1.5px;
 }
 
 .icon {
   margin-right: 5px;
-  font-size: 1.6em;
+  font-size: 1.5em;
   vertical-align: bottom;
   margin-right: 8px;
+}
+
+.voice,
+.try-again,
+.home {
+  background-color: white;
+  color: var(--darkBlue);
 }
 
 .mic {
@@ -116,23 +183,31 @@ a {
   align-self: baseline;
 }
 
+.video-width {
+  width: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.submit-modal .modal-content {
+  background-color: var(--yellow) !important;
+}
+
+.modal-white {
+  color: white;
+  font-size: 2.5em;
+}
+
 /* Media Query */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .question,
-  .prompt,
-  .step-text {
+  .prompt {
     text-align: center;
   }
-  .number {
-    margin-bottom: 5px;
-    position: relative;
-  }
-  .step-text {
-    text-align: left;
-    /* margin-left: 2em; */
-  }
-  .media-btn {
-    margin-right: 0px;
-    margin-bottom: 25px;
+  .flex-row {
+    display: unset;
   }
 }
