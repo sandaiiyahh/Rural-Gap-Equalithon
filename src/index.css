@@ -234,8 +234,18 @@ a {
   .step-text {
     font-size: 1em;
   }
+  .button {
+    padding: 6px;
+  }
   .media-btn {
     padding: 0.5em;
+  }
+  .btn-text {
+    font-size: 1.2em;
+  }
+  .record-icon,
+  .stop-icon {
+    font-size: 2em;
   }
 }
 

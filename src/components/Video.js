@@ -22,7 +22,7 @@ const Video = (props) => {
           {props.capturing ? (
             <Link to="/finish">
               <Button
-                className="btn-block media-btn p-2 stop-btn"
+                className="btn-block media-btn p-0 p-md-2 stop-btn"
                 onClick={props.handleStopCapture}
               >
                 <div className="d-flex justify-content-center">
