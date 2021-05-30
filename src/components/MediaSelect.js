@@ -25,8 +25,8 @@ function MediaSelect(props) {
             <p className="step-text">Try recording again or submit it.</p>
           </div>
         </div>
-        <div className="row justify-content-center">
-          <div className="col-8 col-md-4 mb-2">
+        <div className="row justify-content-center mt-2">
+          <div className="col-10 col-md-4 mb-2">
             <Link to="/video">
               <Button
                 className="btn-block media-btn"
@@ -39,7 +39,7 @@ function MediaSelect(props) {
               </Button>
             </Link>
           </div>
-          <div className="col-8 col-md-4">
+          <div className="col-10 col-md-4">
             <Link to="/audio">
               <Button
                 className="btn-block media-btn voice"

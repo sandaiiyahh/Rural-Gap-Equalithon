@@ -40,7 +40,7 @@ function Permissions(props) {
               Read more
             </button>
             <div className="row justify-content-center mt-4">
-              <div className="col-6 col-md-4 mt-3">
+              <div className="col-10 col-md-4 mt-md-3">
                 <Link to="/start">
                   <Button
                     variant="primary"
