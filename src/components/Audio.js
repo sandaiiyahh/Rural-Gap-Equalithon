@@ -13,7 +13,7 @@ const Audio = (props) => {
         </div>
       </div>
       <div className="row justify-content-center mb-2">
-        <div className="col-12 col-md-7">
+        <div className="col-12 col-md-7 galaxy">
           <ReactMic
             record={props.capturing}
             className="sound-wave media-width"
