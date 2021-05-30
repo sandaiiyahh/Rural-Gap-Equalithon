@@ -52,16 +52,19 @@ class Finalize extends Component {
         <div className="row justify-content-center align-items-center">
           <div>
             {this.props.mediaType === 'V' ? (
-              <video controls src={this.state.url} type="video/webm" />
+              <video
+                className="video-width"
+                controls
+                src={this.state.url}
+                type="video/webm"
+              />
             ) : (
               <audio src={this.state.url} controls />
             )}
           </div>
           <div className="col-12">
             <div className="row justify-content-center">
-              <div
-                className={this.props.mediaType ? 'col-6 col-md-4 mt-3' : ''}
-              >
+              <div className="col-6 col-md-4 mt-3">
                 {this.props.mediaType === 'V' ? (
                   <Link to="/video">
                     <Button className="btn-block button try-again">
