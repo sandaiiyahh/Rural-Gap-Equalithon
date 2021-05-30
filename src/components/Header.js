@@ -7,8 +7,8 @@ function Header() {
       <Navbar.Brand href="/">
         <img
           src="https://i.ibb.co/HFBpbMJ/americatalks.jpg"
-          width="300"
-          height="119"
+          width="225"
+          height="90"
           className="d-inline-block align-top"
           alt="React Bootstrap logo"
         />
