@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function Permissions() {
+function Permissions(props) {
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
@@ -30,7 +30,11 @@ function Permissions() {
             <div className="row justify-content-center mt-4">
               <div className="col-6 col-md-4 mt-3">
                 <Link to="/start">
-                  <Button variant="primary" className="btn-block button">
+                  <Button
+                    variant="primary"
+                    className="btn-block button"
+                    onClick={() => props.setTermsAcceptance(true)}
+                  >
                     Accept
                   </Button>
                 </Link>
