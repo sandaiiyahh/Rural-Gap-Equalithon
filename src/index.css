@@ -201,7 +201,7 @@ a {
 }
 
 /* Media Query */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 975px) {
   .permission-title {
     font-size: 3em;
   }
@@ -314,7 +314,7 @@ a {
   }
   .prompt,
   .step-text {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   .media-btn {
     padding: 0.4em;
