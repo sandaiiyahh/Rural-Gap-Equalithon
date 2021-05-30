@@ -27,13 +27,14 @@ function Permissions(props) {
         <div className="row">
           <div className="col">
             <h1 className="permission-title mt-5">
-              Lorem Ipsum dolor sit amet, consectetur adipscing elit
+              Sharing your feedback will help America Talks reach more people
             </h1>
             <p className="permission-body mt-5">
-              It was popularised in the 1960s with the release of Letraset
-              sheets containing Lorem Ipsum passages, and more recently with
-              desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
+              We'd like to use your video or audio feedback to understand how we
+              can improve the America Talks series, and how the program is
+              having an impact on participants. Your answers will be shared with
+              America Talks program staff, and may also be used to promote
+              future events.
             </p>
             <button className="link" onClick={handleShow}>
               Read more

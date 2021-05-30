@@ -6,8 +6,8 @@ import MediaSelect from './components/MediaSelect';
 import Video from './components/Video';
 import Audio from './components/Audio';
 import Finalize from './components/Finalize';
-import { UPLOAD_URL } from './api';
-//import './App.css';
+//import { UPLOAD_URL, API_KEY } from './api';
+import { UPLOAD_URL } from './api2';
 
 function App() {
   const webcamRef = useRef(null);
@@ -100,10 +100,6 @@ function App() {
         method: 'POST',
         mode: 'cors', // no-cors, *cors, same-origin
         credentials: 'same-origin', // include, *same-origin, omit
-        headers: {
-          //'Content-Type': 'application/json'
-          //'Content-Type': 'application/x-www-form-urlencoded',
-        },
         body: formData,
       })
         .then((response) => response.json())
