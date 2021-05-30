@@ -14,7 +14,7 @@ const Video = (props) => {
       </div>
       <div className="row justify-content-center mb-4">
         <div className="col-12 col-md-7">
-          <Webcam className="video-width" audio={true} ref={props.webcamRef} />
+          <Webcam className="media-width" audio={true} ref={props.webcamRef} />
         </div>
       </div>
       <div className="row justify-content-center">

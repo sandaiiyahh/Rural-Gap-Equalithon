@@ -157,7 +157,7 @@ a {
 }
 
 .btn-text {
-  font-size: 1.3em;
+  font-size: 1.4em;
   margin-bottom: 0px;
   margin-top: 1.5px;
 }
@@ -182,7 +182,7 @@ a {
   align-self: baseline;
 }
 
-.video-width {
+.media-width {
   width: 100%;
 }
 
@@ -242,11 +242,15 @@ a {
     padding: 0.5em;
   }
   .btn-text {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
-  .record-icon,
-  .stop-icon {
+  .record-icon {
     font-size: 2em;
+  }
+  .stop-icon {
+    font-size: 1.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
