@@ -13,7 +13,6 @@ const Video = (props) => {
         </div>
       </div>
       <div className="row justify-content-center my-4">
-        {/* device width */}
         <div className="col-12 col-md-7">
           <Webcam className="video-width" audio={true} ref={props.webcamRef} />
         </div>

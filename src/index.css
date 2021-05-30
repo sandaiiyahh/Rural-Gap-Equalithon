@@ -13,6 +13,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  padding-bottom: 50px;
 }
 
 code {
@@ -131,8 +133,9 @@ a {
 }
 
 .media-btn {
-  padding: 1em;
+  padding: 2em;
   margin-right: 2em;
+  max-width: 100%;
 
   font-size: 12px;
   text-transform: uppercase;
