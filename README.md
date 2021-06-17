@@ -3,7 +3,7 @@ For World Day for Cultural Diversity, [Essteem](https://www.essteem.com/) organi
 
 ![equalithon-listen-first](https://i.ibb.co/tpy7gsb/Screen-Shot-2021-06-17-at-5-40-39-PM.png)
 
-Created by a team of Software Engineers and a UX Designer, our application focuses on inventing an automated system to record people's encounters with the other "world" (rural or urban life). Participants are able to share their feelings and recommendations right after their encounter with someone from the other "world" through video or audio.
+Created by a team of Software Engineers and a UX Designer, our application focuses on inventing an automated system to record people's encounters with the other "world" (rural or urban life). Participants are able to share their feelings and recommendations right after their encounter with someone from the other "world", through video or audio.
 
 # 🔨 Tech Stack
 - React - front-end JavaScript library
